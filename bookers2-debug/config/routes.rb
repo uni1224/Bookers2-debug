@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   end
   resources :messages, only: [:create]
   resources :rooms, only: [:create,:show]
+  get 'tagsearches/search', to: 'tagsearches#search'
  end
