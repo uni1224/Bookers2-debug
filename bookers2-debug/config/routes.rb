@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :book_comments, only: [:create, :destroy]
    resource :favorites, only: [:create, :destroy]
    
+   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
  end
   resources :users, only: [:index,:show,:edit,:update] do
@@ -20,5 +21,6 @@ Rails.application.routes.draw do
   end
   resources :messages, only: [:create]
   resources :rooms, only: [:create,:show]
+  resources :groups, only: [:new, :index, :show, :create, :edit, :update]
   get 'tagsearches/search', to: 'tagsearches#search'
  end
